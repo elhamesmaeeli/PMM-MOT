@@ -45,13 +45,18 @@ PMM-MOT is divided into four separate modules: multi-modal 3D object detection (
 
 ## 🏆 Benchmark Results
 ### Evaluation results on KITTI 2D tracking benchmark:
-| Tracking Benchmark   | Modality       | HOTA ⬆️ | AssA ⬆️ | MOTA ⬆️ | MOTP ⬆️ | FN ⬇️ | FP ⬇️   | IDS ⬇️  |
-| :------------------: | :------------: | :------: | :-----: | :------: | :-----: | :----: | :-----: | :------: | 
-| KITTI (*car*)        | LiDAR          | 79.3     | 82.5    | 86.2     | 85.9    | 327    | 3461    | 210      | 
-| KITTI (*car*)        | Camera + LiDAR | 80.2     | 83.1    | 87.0     | 87.1    | 264    | 3026    | 149      | 
-| KIITI (*pedestrian*) | Camera + LiDAR | 52.4     | 59.3    | 64.7     | 74.9    | 936    | 6977    | 248      | 
+| Tracking Benchmark   | Modality       | HOTA⬆️ | AssA⬆️ | MOTA⬆️ | MOTP⬆️ | FN⬇️ | FP⬇️   | IDS⬇️  |
+| :------------------: | :------------: | :-----: | :----: | :------: | :----: | :---: | :----: | :----: | 
+| KITTI (*car*)        | LiDAR          | 79.3    | 82.5   | 86.2    | 85.9   | 327   | 3461   | 210     | 
+| KITTI (*car*)        | Camera + LiDAR | 80.2    | 83.1   | 87.0    | 87.1   | 264   | 3026   | 149     | 
+| KIITI (*pedestrian*) | Camera + LiDAR | 52.4    | 59.3   | 64.7    | 74.9   | 936   | 6977   | 248     | 
 
-### Evaluation results on nuScenes validation set using various detectors:
+### Evaluation results on unofficial KITTI 3D tracking benchmark:
+| Tracking Benchmark   | Modality       | AMOTA⬆️ | IDS⬇️  | FRAG⬇️  |
+| :------------------: | :------------: | :-----: | :-----: | :------: |
+| KITTI (*car*)        | Camera + LiDAR | 47.6    | 0       | 12       |
+| KIITI (*pedestrian*) | Camera + LiDAR | 45.92   | 6       | 27       |
+### Evaluation results on nuScenes tracking benchmark
 | Detector                    | Sensor Modality | AMOTA    | AMOTP    | IDS     |
 | :---------------------------: | :---------------: | :--------: | :--------: | ------- |
 | LargeKernel3D-L             | LiDAR           | 74.8     | 54.9     | 263     |
