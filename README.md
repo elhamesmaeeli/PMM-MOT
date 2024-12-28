@@ -43,7 +43,7 @@ Achieved state-of-the-art performance:
 PMM-MOT is divided into four separate modules: multi-modal 3D object detection (MM-ODM), probabilistic multi-motion trajectory prediction (PMM-TPM), probabilistic two-stage data association (PTS-DAM), and trajectory management
 ![PMM-MOT main architecture at frame t](images/PMM-MOT-Architecture.png)
 
-## Benchmark Result
+## 🏆 Benchmark Results
 ### The PMM-MOT results on nuScenes validation set:
 | Detector                    | Sensor Modality | AMOTA    | AMOTP    | IDS     |
 | :---------------------------: | :---------------: | :--------: | :--------: | ------- |
@@ -53,14 +53,17 @@ PMM-MOT is divided into four separate modules: multi-modal 3D object detection (
 | LargeKernel3D               | Camera + LiDAR  | **78.4** | **54.4** | **207** |
 
 
-## Visualization of Results
-Visualization of PMM-MOT result at sene-0998 (frame 4) of nuScenes dataset
+## 🎥Visualization 
+PMM-MOT qualitative results on sene-0998 (frame 3 to 25) and scene-1048 (frames 21 50 3) of the nuScenes dataset:
+- **🚌 🚗Scene-0998**: The depicted car and bus objects must navigate the town square by performing a curve maneuvering (highlighted by green 3D bounding boxes as the ground truth) to proceed successfully. 
+- **🏍️ Scene-1048**: Scene-1048 involves tracking a motorcycle, characterized by its agile and often unpredictable movements.
 
-![The result of CV and CT model](images/Visualization2.png)
+*PMM-MOT operates by dynamically predicting the upcoming position of each object (blue 3D bounding boxes) based on potential maneuvers (gray 3D bounding boxes) and their probability of occurrence. This approach allows PMM-MOT to smoothly handle transitions, such as when vehicles switch between straight-line driving and turning or perform atypical maneuvers, without requiring category-specific modeling. This robust adaptability ensures more reliable long-term tracking, fewer lost objects, and improved trajectory smoothness across varying motion patterns.*
+![Visualization results on scene-0998](images/scene-0998.jpg)
 
-![The result of CV and CT model](images/Visualization1.png)
+![Visualization results on scene-1048](images/scene-1048.jpg)
 
-# Resources for calculating the average mass of objects
+## Resources for calculating the average mass of objects
 The table below indicates the resources for calculating the average mass of each category of objects:
 
 | Category   | Average Mass (kg)     | References                                                                                                                                                                                                                                                                               |
