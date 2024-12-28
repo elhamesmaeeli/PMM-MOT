@@ -59,9 +59,9 @@ PMM-MOT qualitative results on sene-0998 (frame 3 to 25) and scene-1048 (frames 
 - **🏍️ Scene-1048**: Scene-1048 involves tracking a motorcycle, characterized by its agile and often unpredictable movements.
 
 *PMM-MOT operates by dynamically predicting the upcoming position of each object (blue 3D bounding boxes) based on potential maneuvers (gray 3D bounding boxes) and their probability of occurrence. This approach allows PMM-MOT to smoothly handle transitions, such as when vehicles switch between straight-line driving and turning or perform atypical maneuvers, without requiring category-specific modeling. This robust adaptability ensures more reliable long-term tracking, fewer lost objects, and improved trajectory smoothness across varying motion patterns.*
-![Visualization results on scene-0998](images/scene-0998.jpg)
+![Visualization results on scene-0998](images/scene-0998.jpg) **Scene-0998**
 
-![Visualization results on scene-1048](images/scene-1048.jpg)
+![Visualization results on scene-1048](images/scene-1048.jpg) **Scene-1048**
 
 ## Resources for calculating the average mass of objects
 The table below indicates the resources for calculating the average mass of each category of objects:
