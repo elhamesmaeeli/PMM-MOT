@@ -39,12 +39,19 @@ Achieved state-of-the-art performance:
 - **nuScenes Benchmark**:
   - **75.5%** average multi-object tracking
 
-## Architecture
+## 📑 Architecture
 PMM-MOT is divided into four separate modules: multi-modal 3D object detection (MM-ODM), probabilistic multi-motion trajectory prediction (PMM-TPM), probabilistic two-stage data association (PTS-DAM), and trajectory management
 ![PMM-MOT main architecture at frame t](images/PMM-MOT-Architecture.png)
 
 ## 🏆 Benchmark Results
-### The PMM-MOT results on nuScenes validation set:
+### Evaluation results on KITTI 2D tracking benchmark:
+| Tracking Benchmark            | Sensor Modality   | HOTA⬆️     | AssA⬆️     | MOTA⬆️     | HOTP⬆️     | FN⬇️     | FP⬇️     | IDS⬇️      |
+| :---------------------------: | :---------------: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | 
+| KITTI (*car* category)        | LiDAR             | 79.3       | 82.5       | 86.2       | 85.9       | 327        | 3461       | 210        | 
+| KITTI (*car* category)        | Camera + LiDAR    | 80.2       | 83.1       | 87.0       | 87.1       | 264        | 3026       | 149        | 
+| KIITI (*pedestrian* category) | Camera + LiDAR    | 52.4       | 59.3       | 64.7       | 74.9       | 936        | 6977       | 248        | 
+
+### Evaluation results on nuScenes validation set using various detectors:
 | Detector                    | Sensor Modality | AMOTA    | AMOTP    | IDS     |
 | :---------------------------: | :---------------: | :--------: | :--------: | ------- |
 | LargeKernel3D-L             | LiDAR           | 74.8     | 54.9     | 263     |
