@@ -1,27 +1,46 @@
 > **Note:** The source code for this project will be added soon. Stay tuned for updates!
-# Adaptive Probabilistic Multi-Model Framework for Robust 3D Multi-Object Tracking Under Uncertainty  Tracking
-3D multi-object tracking is a crucial task for intelligent navigation systems and autonomous vehicles, 
-enabling continuous localization and re-identification of surrounding objects. 
-Current methods often rely on simple motion models like constant velocity and constant turn for trajectory prediction. 
-However, these models struggle in uncertain environments where objects may perform abrupt maneuvers 
-due to various factors such as collision avoidance, curiosity-driven exploration, or scene dynamics. 
-To address this challenge, we propose a dynamic probabilistic multi-model framework 
-that leverages multiple parallel motion models for enhanced prediction accuracy, 
-considering potential object maneuvers. 
-Our framework introduces two novel motion models based on a learned probabilistic multi-category deviation angle. 
-Combined with the constant velocity model, these yield three trajectory predictions, each assigned a probability of occurrence. 
-We utilize a machine learning model based on logistic regression to estimate 
-the probability of each prediction according to the object's momentum. 
-Additionally, we introduce two probabilistic cost functions for updating trajectories during 
-a two-stage data association process, prioritizing predictions with higher probabilities. 
-Experiments on the nuScenes dataset demonstrate our framework's superior performance, 
-achieving an average multi-object tracking accuracy of **78.4%**, surpassing state-of-the-art trackers.
 
 ![PMM-MOT poster](images/PMM-MOT-Poster.png)
 
-## PMM-MOT Architecture
-PMM-MOT is divided into four separate modules: multi-modal 3D object detection (MM-ODM), probabilistic multi-motion trajectory prediction (PMM-TPM), probabilistic two-stage data association (PTS-DAM), and trajectory management
+# Abstract
 
+> 🎯 **Key Innovation**: A dynamic probabilistic multi-model framework for 3D multiple object tracking that adapts to uncertain environments.
+
+## 🔍 Problem Statement
+3D multiple object tracking is crucial for:
+- Intelligent navigation systems
+- Autonomous vehicles
+- Continuous localization
+- Object re-identification
+
+## 💡 Challenges Addressed
+- Traditional simple motion models (constant velocity/acceleration) struggle with:
+  - Abrupt maneuvers
+  - Collision avoidance scenarios
+  - Curiosity-driven exploration
+  - Dynamic scene changes
+- Category-specific motion models:
+  - Only slightly improve accuracy
+  - Increase system complexity
+  - Struggle with atypical maneuvers
+
+## 🚀 Our Solution
+We propose a framework that:
+- Uses multiple parallel motion models
+- Introduces two novel motion models based on learned probabilistic multi-category deviation angles
+- Combines with constant velocity model for three trajectory predictions
+- Employs logistic regression for momentum-based probability estimation
+
+## 📊 Results Highlights
+Achieved state-of-the-art performance:
+- **KITTI Benchmark**:
+  - Cars: **80.27%** tracking accuracy
+  - Pedestrians: **52.48%** tracking accuracy
+- **nuScenes Benchmark**:
+  - **75.5%** average multi-object tracking
+
+## Architecture
+PMM-MOT is divided into four separate modules: multi-modal 3D object detection (MM-ODM), probabilistic multi-motion trajectory prediction (PMM-TPM), probabilistic two-stage data association (PTS-DAM), and trajectory management
 ![PMM-MOT main architecture at frame t](images/PMM-MOT-Architecture.png)
 
 ## Benchmark Result
