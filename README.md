@@ -44,26 +44,32 @@ PMM-MOT is divided into four separate modules: multi-modal 3D object detection (
 ![PMM-MOT main architecture at frame t](images/PMM-MOT-Architecture.png)
 
 ## 🏆 Benchmark Results
-### Evaluation results on KITTI 2D tracking benchmark:
+### Evaluation results on the KITTI 2D tracking benchmark:
 | Tracking Benchmark   | Modality       | HOTA⬆️ | AssA⬆️ | MOTA⬆️ | MOTP⬆️ | FN⬇️ | FP⬇️   | IDS⬇️  |
 | :------------------: | :------------: | :-----: | :----: | :------: | :----: | :---: | :----: | :----: | 
 | KITTI (*car*)        | LiDAR          | 79.3    | 82.5   | 86.2    | 85.9   | 327   | 3461   | 210     | 
 | KITTI (*car*)        | Camera + LiDAR | 80.2    | 83.1   | 87.0    | 87.1   | 264   | 3026   | 149     | 
 | KIITI (*pedestrian*) | Camera + LiDAR | 52.4    | 59.3   | 64.7    | 74.9   | 936   | 6977   | 248     | 
 
-### Evaluation results on unofficial KITTI 3D tracking benchmark:
+
+### Evaluation results on the unofficial KITTI 3D tracking benchmark:
 | Tracking Benchmark   | Modality       | AMOTA⬆️ | IDS⬇️  | FRAG⬇️  |
 | :------------------: | :------------: | :-----: | :-----: | :------: |
 | KITTI (*car*)        | Camera + LiDAR | 47.6    | 0       | 12       |
 | KIITI (*pedestrian*) | Camera + LiDAR | 45.92   | 6       | 27       |
-### Evaluation results on nuScenes tracking benchmark
-| Detector                    | Sensor Modality | AMOTA    | AMOTP    | IDS     |
-| :---------------------------: | :---------------: | :--------: | :--------: | ------- |
-| LargeKernel3D-L             | LiDAR           | 74.8     | 54.9     | 263     |
-| CenterPoint & Cascade R-CNN | Camera + LiDAR  | 76.3     | 54.7     | 213     |
-| BEVFusion                   | Camera + LiDAR  | 76.9     | 56.2     | 219     |
-| LargeKernel3D               | Camera + LiDAR  | **78.4** | **54.4** | **207** |
 
+
+### Evaluation results on the nuScenes tracking benchmark
+| Modality       | AMOTA⬆️ | FN⬇️    | FP⬇️     | IDS⬇️   |
+| :------------: | :------: | :-----: | :------: | :------: |
+| LiDAR          | 71.1     | 17325   | 20502    | 391      |
+| Camera + LiDAR | 75.5     | 16224   | 19136    | 249      |
+
+### Achieved AMOTA results on the nuScenes tracking benchmark for each distinct categories
+| Modality       | Bicycle | Bus   | Car   | Motorcycle  | Pedestrian  | Trailer  | Truck  |
+| :------------: | :-----: | :---: | :---: | :---------: | :---------: | :------: | :----: |
+| LiDAR          | 57.4	   | 75.3  | 80.5  | 72.8	     | 81.4	       | 69.2     |	61.7   |
+| Camera + LiDAR | 60.3    | 76.1  | 83.7  | 82.6        | 87.9	       | 72.5	  | 65.8   |
 
 ## 🎥Visualization 
 PMM-MOT qualitative results on sene-0998 (frame 3 to 25) and scene-1048 (frames 21 50 3) of the nuScenes dataset:
